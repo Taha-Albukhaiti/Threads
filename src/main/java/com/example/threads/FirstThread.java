@@ -19,11 +19,11 @@ public class FirstThread {
 
         try {
             TimeUnit.SECONDS.sleep(3);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
 
-      //  Thread t2 = new Thread(new CounterCommand());
+        //  Thread t2 = new Thread(new CounterCommand());
         //t2.start();
 
         //Thread dt = new DateThread();
@@ -31,23 +31,24 @@ public class FirstThread {
 
         new DateThread();
 
-        try{
+        try {
             Thread.sleep(5000);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
 
         Thread tname = new Thread(new Moin(), "Moin thread");
-        System.out.println("Name des Threads : " +tname.getName());
+        System.out.println("Name des Threads : " + tname.getName());
         tname.setName("Hello lo");
-        System.out.println("Name des Threads : " +tname.getName());
+        System.out.println("Name des Threads : " + tname.getName());
 
     }
-    static class Moin implements Runnable{
+
+    static class Moin implements Runnable {
 
         @Override
         public void run() {
-            for (int i = 0; i < 10; i++){
+            for (int i = 0; i < 10; i++) {
                 System.out.println("Moin moin!");
             }
         }
